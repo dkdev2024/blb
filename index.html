@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blub</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .btn{
+            margin-top: 100px;
+        }
+        img{
+            height: 200px;
+            width: 120px;
+        }
+        #on{
+            display: none;
+        }
+        #off{
+            display: block;
+        }
+        #btnOn{
+            display: block;
+        }
+        #btnOff{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="pic_bulboff.gif" alt="" id="off">
+            <img src="pic_bulbon.gif" alt="" id="on">
+        </div>
+        <div class="btn">
+            <button id="btnOn">Blub On</button>
+            <button id="btnOff">Blub Off</button>
+        </div>
+    </div>
+    <script>
+        $(document).ready(()=>{
+            $("#btnOn").click(()=>{
+                $("#btnOn").css("display","none")
+                $("#btnOff").css("display","block")
+                $("#off").css("display","none");
+                $("#on").css("display","block");
+            })
+            $("#btnOff").click(()=>{
+                $("#btnOff").css("display","none")
+                $("#btnOn").css("display","block")
+                $("#on").css("display","none");
+                $("#off").css("display","block");
+            })
+        });
+    </script>
+</body>
+
+</html>
